@@ -23,4 +23,9 @@ First things first: **Find a buddy!**
 * When a user clicks the button, a random Gif appears on the screen.
 
 
+#### BONUS Allow User To Choose How Many Gifs
+
+* add an additional input that allows the user to choose how many gifs to pull
+
+
 #### Done? You are awesome! Here is your :cookie:
