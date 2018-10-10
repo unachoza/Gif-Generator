@@ -27,7 +27,7 @@ First things first: **Find a buddy!**
 
 * Commit messages should be made after the creation of every component.
 * Upload your pic of your react app heirarch with as much detail as possible.
-* Create a full request 
+* Create a pull request 
 
 
 #### BONUS Allow User To Choose How Many Gifs
