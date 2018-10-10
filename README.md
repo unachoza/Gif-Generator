@@ -19,6 +19,7 @@ First things first: **Find a buddy!**
 #### 🚀 Completion looks like:
 
 * You have a colorful diagram of your components.
+* The app should show a "loading..." message until the fetch call has been completed
 * You have an application that renders a button on page load.
 * When a user clicks the button, a random Gif appears on the screen.
 
