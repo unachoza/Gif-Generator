@@ -4,8 +4,6 @@
 
 Let's build a react giphy app!
 
-First things first: **Find a buddy!**
-
 #### Your task is:
 * Go to the Giphy docs [HERE](https://developers.giphy.com/docs/), _read_ them,  create an account abd get your Free API key.
 
