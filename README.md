@@ -9,11 +9,11 @@ First things first: **Find a buddy!**
 #### Your task is:
 * Go to the Giphy docs [HERE](https://developers.giphy.com/docs/), _read_ them,  create an account abd get your Free API key.
 
-* Diagram your App:
-  * What components will you have?
-  * Where would state "live"?
-  * Where do you need to pass props?
-  * In which lifecycle  method do you need to make your API call?
+* Visualize Your App:
+  * Determine how many components you should create and their naming conventions.
+  * Draw out your app heirarchy.
+  * Ask yourself were would state "live".
+  * Update app heirarchy pass props
 
 
 #### 🚀 Completion looks like:
@@ -22,10 +22,15 @@ First things first: **Find a buddy!**
 * You have an application that renders a button on page load.
 * When a user clicks the button, a random Gif appears on the screen.
 
+#### HW Submission
+
+* Commit messages should be made after the creation of every component.
+* Upload your pic of your react app heirarch with as much detail as possible.
+* Create a full request 
+
 
 #### BONUS Allow User To Choose How Many Gifs
 
 * add an additional input that allows the user to choose how many gifs to pull
 
 
-#### Done? You are awesome! Here is your :cookie:
