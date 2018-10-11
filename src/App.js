@@ -16,7 +16,7 @@ function handleClick (){
 }
 
 
-class App extends Component {
+  class App extends Component {
   // let apiKey = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=uaamNElL4jG37MRtb5dGkrRHt8icgto6&limit=5%22"
   render() {
     return (
