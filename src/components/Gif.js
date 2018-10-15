@@ -1,11 +1,27 @@
-import React, {Componenet} from 'react'
+import React, {Component} from 'react'
 
-// class Gif extends Componenet {
-    render() {
-        return (
-            <div></div>
-        )
+ class Gif extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            text: ''
+        }
+        this.captureData = this.captureData.bind(this);
+    }
+    captureData (e){
+        this.setState({ text: e.target.value }) 
     }
 
+    render() {
+        
+        return (
+            <div>
+                <input onChange={this.captureData} type="text"/>
+                <button onClick={() => this.props.makeCall(this.state.text) }>Submit</button>
+            </div>
+        )
+    }
+}
 
-export default App;
+
+export default Gif;

@@ -1,19 +1,21 @@
   import React, {Component} from 'react'
 
   class GifList extends Component {
-        // constructor (){
-        // super() 
-        // this.state = {
-        //     data,
-
-
-        //     }
-        // }
+        constructor (props){
+        super(props) 
+        
+        }
+        componentDidMount(){
+            console.log(this.props.gifResult)
+        }
     render(){
+        const img = this.props.gifResult.embed_url ? this.props.gifResult.embed_url : ""
         return(
-            <div></div>
+            <div>
+                <iframe src={img}/>
+            </div>
         )
     }
-      }
+      }x
   
-export default App;
+export default GifList;

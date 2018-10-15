@@ -1,45 +1,62 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 import Gif from "./components/Gif"
 import GifList from "./components/GifList"
 
-// function makeCall() {
-//   window.fetch("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=uaamNElL4jG37MRtb5dGkrRHt8icgto6&limit=5%22")
-//     .then(res => res.json())
-//     .then(res => getData(res))
-// }
+
+
+/* build a search form
+submit button that handles search event 
+the event is querying the API 
+rendering API data 
+*/
 
 
 
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      gifResult: {}
+    }
 
-function onClick (){ 
-  this.setState(state => ({
-
-}
-
-
-  class App extends Component {
+    this.makeCall = this.makeCall.bind(this);
+  }
   // let apiKey = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=uaamNElL4jG37MRtb5dGkrRHt8icgto6&limit=5%22"
-  render() {
+  makeCall(input) {
+    window.fetch(`http://api.giphy.com/v1/gifs/search?q=${input}&api_key=uaamNElL4jG37MRtb5dGkrRHt8icgto6&limit=5%22`)
+      .then(res => res.json())
+      .then(res => { 
+        this.setState({gifResult: res.data[0]})
+        console.log(res.data[0])
+      })
+
+  }
+
+  onClick() {
+    this.setState(state => ({
+  
+    }))
+  }
+
+  func(value) {
     return (
-        <div>
-        <h1>My React App</h1>
-        {/* create the form to get the value of submission (state?) */}
-        <form>
-          <label>
-            Name:
-            <input type="text" name="name" />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-        {/* Button with onclick to recieve value (state) 
-        need to take value and pass it back up to App
-        child to parent */}
-        <button onClick ={}>Generate Gif</button>
+      <div className={ value } />
+    )
+  }
+  
+
+  render() {
+
+
+    return ( 
+      <div className="main">
+      <Gif makeCall={ this.makeCall } />
+      <GifList gifResult = {this.state.gifResult}/>
+
       </div>
     );
   }
 }
 
-// React.render(<div/>, document.getElementById('app'))
+export default App;
