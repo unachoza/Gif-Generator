@@ -51,6 +51,7 @@ class App extends Component {
 
     return ( 
       <div className="main">
+      <h1>Find Your GIF</h1>
       <Gif makeCall={ this.makeCall } />
       <GifList gifResult = {this.state.gifResult}/>
 
