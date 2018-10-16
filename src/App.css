@@ -22,3 +22,24 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+iframe {
+  height: 300px;
+  width: 400px;
+}
+input {
+  padding: 25px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+button {
+  padding: 20px;
+  background-color: rgb(155, 107, 201);
+  font-size: 20px;
+  border-radius: 4px;
+  margin: 10px;
+  margin-top: 10px;
+}

@@ -16,6 +16,6 @@
             </div>
         )
     }
-      }x
+      }
   
 export default GifList;

@@ -16,7 +16,7 @@ import React, {Component} from 'react'
         
         return (
             <div>
-                <input onChange={this.captureData} type="text"/>
+                <input placeholder = "type a feeling" onChange={this.captureData} type="text"/>
                 <button onClick={() => this.props.makeCall(this.state.text) }>Submit</button>
             </div>
         )
