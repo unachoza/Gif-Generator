@@ -24,15 +24,22 @@ class App extends Component {
 
     this.makeCall = this.makeCall.bind(this);
     this.changeLoading = this.changeLoading.bind(this);
+    this.nextGif = this.nextGif.bind(this)
   }
   // let apiKey = "http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=uaamNElL4jG37MRtb5dGkrRHt8icgto6&limit=5%22"
   makeCall(input) {
     window.fetch(`http://api.giphy.com/v1/gifs/search?q=${input}&api_key=uaamNElL4jG37MRtb5dGkrRHt8icgto6&limit=5%22`)
       .then(res => res.json())
       .then(res => { 
-        this.setState({gifResult: res.data[0]})
+        this.setState({gifResult: res.data[this.state.gifIndex]})
         console.log(res.data[0])
       })
+
+  }
+  nextGif (){
+    this.setState((prevState)=> ({
+      gifIndex: prevState.gifIndex + 1
+    }))
 
   }
   changeLoading(){
@@ -62,7 +69,11 @@ class App extends Component {
     return ( 
       <div className="main">
       <h1>Find Your GIF !</h1>
-      <Gif makeCall={ this.makeCall } />
+      <Gif 
+      makeCall={ this.makeCall } 
+      nextGif={this.nextGif}
+
+      />
       <GifList 
         changeLoading = {this.changeLoading}
         isLoading= {this.state.isLoading} 

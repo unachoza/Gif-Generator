@@ -18,6 +18,7 @@ import React, {Component} from 'react'
             <div>
                 <input placeholder = "type a feeling"onChange={this.captureData} type="text"/>
                 <button onClick={() => this.props.makeCall(this.state.text) }>Submit</button>
+                <button onClick={this.props.nextGif}>Next</button>
             </div>
         )
     }
