@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+// import './App.css';
 import Gif from "./components/Gif"
 import GifList from "./components/GifList"
 
