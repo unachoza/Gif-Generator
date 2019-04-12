@@ -10,6 +10,12 @@
         componentDidMount(){
             
         }
+        hasGifResult(){
+            if(this.props.gifResult){
+                this.props.changeLoading()
+                }
+            }
+            
         componentDidUpdate(prevProps,prevState){
             if(prevProps.gifResult.embed_url !== this.props.gifResult.embed_url){
                 this.hasGifResult()
@@ -18,11 +24,7 @@
             },1500)
             }
         }
-    hasGifResult(){
-        if(this.props.gifResult){
-            this.props.changeLoading()
-        }
-    }
+ 
     
     render(){
         const img = this.props.gifResult.embed_url ? this.props.gifResult.embed_url : ""

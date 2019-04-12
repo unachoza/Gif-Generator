@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import './App.css';
+import './index.css';
 import Gif from "./components/Gif"
 import GifList from "./components/GifList"
 
@@ -36,10 +36,12 @@ class App extends Component {
       })
 
   }
-  nextGif (){
+  nextGif() {
+    console.log('working')
     this.setState((prevState)=> ({
-      gifIndex: prevState.gifIndex + 1
+      gifIndex: prevState.gifIndex + 2
     }))
+    console.log(this.state.gifIndex)
 
   }
   changeLoading(){
