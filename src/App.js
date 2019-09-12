@@ -32,7 +32,7 @@ class App extends Component {
       .then(res => res.json())
       .then(res => { 
         this.setState({gifResult: res.data[this.state.gifIndex]})
-        console.log(res.data[0])
+        console.log(res.data)
       })
 
   }
@@ -41,7 +41,10 @@ class App extends Component {
     this.setState((prevState)=> ({
       gifIndex: prevState.gifIndex + 2
     }))
-    console.log(this.state.gifIndex)
+    // console.log(this.state.gifIndex)
+    // this.setState(gifResult(prevState) => ({
+    //   gifResult: prevState.
+    // }))
 
   }
   changeLoading(){
